@@ -2,14 +2,14 @@ import express from "express";
 
 import bodyParser from 'body-parser';
 
-import userRoutes from './routes/users.js'
+import postRoutes from './routes/posts.js'
 
 const app = express();
 const PORT = 5000;
 
 app.use( bodyParser.json() );
 
-app.use('/users', userRoutes)
+app.use('/posts', postRoutes)
 
 app.get( '/', ( req, res ) => {
     res.send('hello from Express.js')
